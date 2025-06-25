@@ -42,6 +42,8 @@ class SignUpPage extends StatelessWidget {
                   const SizedBox(height: 16),
                   _buildTextField("ອີເມວ:", "ອີເມວ...", false),
                   const SizedBox(height: 16),
+                  _buildTextField("ເບີໂທລະສັບ:", "ເບີໂທລະສັບ...", false),
+                  const SizedBox(height: 16),
                   _buildTextField("ລະຫັດຜ່ານ:", "ລະຫັດຜ່ານ...", true),
                   const SizedBox(height: 16),
                   _buildTextField(

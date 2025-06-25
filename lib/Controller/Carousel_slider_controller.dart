@@ -1,33 +1,36 @@
-import 'package:carousel_slider_plus/carousel_slider_plus.dart';
 import 'package:flutter/material.dart';
-import 'package:carousel_slider_plus/carousel_controller.dart';
+import 'package:carousel_slider_plus/carousel_slider_plus.dart';
 
-class CarouselDemo extends StatelessWidget {
-  CarouselSliderController buttonCarouselController =
-      CarouselSliderController();
+class CustomCarouselWithController extends StatefulWidget {
+  final List<Widget> items;
+
+  const CustomCarouselWithController({super.key, required this.items});
 
   @override
-  Widget build(BuildContext context) => Column(
-    children: <Widget>[
-      CarouselSlider(
-        items: child,
-        controller: buttonCarouselController,
-        options: CarouselOptions(
-          autoPlay: false,
-          enlargeCenterPage: true,
-          viewportFraction: 0.9,
-          aspectRatio: 2.0,
-          initialPage: 2,
+  State<CustomCarouselWithController> createState() =>
+      _CustomCarouselWithControllerState();
+}
+
+class _CustomCarouselWithControllerState
+    extends State<CustomCarouselWithController> {
+  final CarouselSliderController _controller = CarouselSliderController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        CarouselSlider(
+          items: widget.items,
+          controller: _controller,
+          options: CarouselOptions(
+            autoPlay: false,
+            enlargeCenterPage: true,
+            viewportFraction: 0.9,
+            aspectRatio: 2.0,
+            initialPage: 0,
+          ),
         ),
-      ),
-      RaisedButton(
-        onPressed:
-            () => buttonCarouselController.nextPage(
-              duration: Duration(milliseconds: 300),
-              curve: Curves.linear,
-            ),
-        child: Text('→'),
-      ),
-    ],
-  );
+      ],
+    );
+  }
 }

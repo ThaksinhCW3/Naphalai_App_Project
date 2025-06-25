@@ -11,34 +11,18 @@ class ProductCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset(
-            'assets/images/IMG_1540.png',
-            height: 100,
-            fit: BoxFit.cover,
-          ),
+          Image.asset('assets/images/IMG_1540.png', fit: BoxFit.cover),
           const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8),
+            padding: EdgeInsets.all(8),
             child: Text(
-              "ลิปละลึก - blah blah...",
+              "Lipstick - blah blah...",
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
           ),
           const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8),
+            padding: EdgeInsets.symmetric(vertical: 1, horizontal: 8),
             child: Text("100,000 ₭", style: TextStyle(color: Colors.pink)),
-          ),
-          const Padding(
-            padding: EdgeInsets.all(10),
-            child: Row(
-              children: [
-                Icon(Icons.star, size: 16, color: Colors.amber),
-                Text(
-                  "5.0 (128) | ขายแล้ว 100+ อัน",
-                  style: TextStyle(fontSize: 12),
-                ),
-              ],
-            ),
           ),
         ],
       ),

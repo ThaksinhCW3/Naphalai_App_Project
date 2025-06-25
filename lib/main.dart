@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+// import 'package:naphalai_e/screens/home/home.dart';
 import 'package:naphalai_e/screens/onboarding/onboard_page.dart';
-// import 'package:naphalai_e/widgets/bottom_navbar.dart';
-// import 'package:naphalai_e/screens/onboarding/onboard_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,6 +18,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      // home: HomePage(),
       home: OnboardingPage(), // Replace with your actual onboarding page
     );
   }
