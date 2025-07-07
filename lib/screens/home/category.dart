@@ -69,7 +69,7 @@ class _CategoryPageState extends State<CategoryPage> {
               child: Row(
                 children: [
                   // Category Selector
-                  Container(
+                  SizedBox(
                     width: 90,
                     child: ListView.builder(
                       itemCount: categories.length,

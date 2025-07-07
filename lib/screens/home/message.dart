@@ -30,10 +30,7 @@ class _MessagePageState extends State<MessagePage> {
         automaticallyImplyLeading: false,
       ),
       body: Container(
-        decoration: const BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
-        ),
+        decoration: const BoxDecoration(color: Colors.white),
         child: Column(
           children: [
             const SizedBox(height: 16),
